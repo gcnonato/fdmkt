@@ -1,0 +1,255 @@
+/*------------- Form ---------------*/
+
+.cp-form-wrapper {
+    position : fixed;
+    z-index : 9999;
+    animation : cpfadeIn 1s forwards;
+    opacity : 0;
+}
+
+@keyframes cpfadeIn {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+
+.cp-form-close {
+    position : relative;
+    z-index : 1;
+    margin-bottom : -5px;
+    padding : 20px;
+    cursor : pointer;
+}
+
+#cp-form-3 ,
+#cp-form-3:checked ~ .cp-form-3,
+.cp-form-wrapper.down {
+    display : none;
+}
+
+#cp-form-3:checked ~ .cp-form-close-btn:before {
+    content : '\f0e0';
+}
+
+.cp-form-close-btn {
+    line-height : 40px;
+    position : absolute;
+    z-index : 0;
+    top : 0;
+    left : 0;
+    width : 40px;
+    height : 40px;
+    text-align : center;
+}
+
+.cp-form-3 {
+    position : relative;
+    width : 300px;
+    padding : 6px 0;
+}
+
+.cp-title {
+    font-size : 16px;
+    margin : 15px;
+    padding-bottom : 8px;
+    border-bottom : solid 1px;
+}
+
+.cp-title span {
+    font-size : 13px;
+    display : block;
+}
+
+.cp-title-icon {
+    font-size : 38px;
+    position : absolute;
+    top : 17px;
+    right : 16px;
+}
+
+.cp-fields {
+    position : relative;
+    margin-bottom : 12px;
+    padding : 5px;
+}
+
+.cp-fields .fa {
+    font-size : 18px;
+    position : absolute;
+    z-index : 1;
+    top : 14px;
+    left : 26px;
+}
+
+.cp-fields input ,
+.cp-fields textarea {
+    position : relative;
+    left : 9px;
+    width : 272px;
+    padding : 8px 7px 8px 40px;
+    border : none;
+}
+
+.cp-fields textarea {
+    max-width : 276px;
+    min-height : 115px;
+}
+
+.cp-form-3 input[type='submit'] {
+    display : block;
+    margin : 10px auto 25px;
+    padding : 5px 30px;
+    border : none;
+}
+
+.cp-fields input:focus ,
+.cp-fields textarea:focus {
+    outline : none;
+}
+
+.cp-form-3-success {
+    margin: 20px;
+    border: dashed 1px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: all .6s ease;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #fff;
+    width: 260px;
+    text-align: center;
+}
+
+.cp-form-3-success.cp-form-3-success-show {
+    left: 0;
+}
+
+#cp-form-3a.cp-form-3-hide .cp-fields,
+#cp-form-3a.cp-form-3-hide input[type='submit'] {
+    visibility: hidden;
+}
+
+/*----------- Colors -----------*/
+
+.cp-form-wrapper.blue .cp-form-close-btn {
+    color : #ffffff;
+    background : rgba(61, 72, 103, .85);
+}
+.cp-form-wrapper.blue .cp-form-3 {
+    background : rgba(61, 72, 103, .85);
+}
+
+.cp-form-wrapper.blue .cp-title {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.blue .cp-title-icon {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.blue .cp-fields .fa {
+    color : #333333;
+}
+
+.cp-form-wrapper.blue .cp-form-3 input[type='submit'] {
+    color : #ffffff;
+    background : #333333;
+}
+
+.cp-form-wrapper.purple .cp-form-close-btn {
+    color : #ffffff;
+    background : rgba(87, 61, 103, .85);
+}
+.cp-form-wrapper.purple .cp-form-3 {
+    background : rgba(87, 61, 103, .85);
+}
+
+.cp-form-wrapper.purple .cp-title {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.purple .cp-title-icon {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.purple .cp-fields .fa {
+    color : #333333;
+}
+
+.cp-form-wrapper.purple .cp-form-3 input[type='submit'] {
+    color : #ffffff;
+    background : #333333;
+}
+
+.cp-form-wrapper.grey .cp-form-close-btn {
+    color : #ffffff;
+    background : rgba(49, 49, 49, .85);
+}
+.cp-form-wrapper.grey .cp-form-3 {
+    background : rgba(49, 49, 49, .85);
+}
+
+.cp-form-wrapper.grey .cp-title {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.grey .cp-title-icon {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.grey .cp-fields .fa {
+    color : #333333;
+}
+
+.cp-form-wrapper.grey .cp-form-3 input[type='submit'] {
+    color : #ffffff;
+    background : #333333;
+}
+
+.cp-form-wrapper.grey .cp-form-close-btn {
+    color : #ffffff;
+    background : rgba(49, 49, 49, .85);
+}
+.cp-form-wrapper.grey .cp-form-3 {
+    background : rgba(49, 49, 49, .85);
+}
+
+.cp-form-wrapper.grey .cp-title {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.grey .cp-title-icon {
+    color : #ffffff;
+}
+
+.cp-form-wrapper.grey .cp-fields .fa {
+    color : #333333;
+}
+
+.cp-form-wrapper.grey .cp-form-3 input[type='submit'] {
+    color : #ffffff;
+    background : #333333;
+}
+
+/*----------- Positioning -----------*/
+
+.cp-form-wrapper.bottom-left {
+    bottom : 0;
+    left : 20px;
+}
+
+.cp-form-wrapper.bottom-right {
+    right : 20px;
+    bottom : 0;
+}
+
+.cp-form-wrapper.bottom-center {
+    bottom : 0;
+    left : 50%;
+    transform : translateX(-50%);
+}

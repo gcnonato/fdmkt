@@ -1,0 +1,377 @@
+/*------------- Form ---------------*/
+
+.cp-form-2 {
+    position : fixed;
+    z-index : 9999;
+    width : 300px;
+    border-radius : 5px;
+}
+
+.cp-form-2-header {
+    cursor: pointer;
+}
+
+img.cp-user-icon {
+    width : 100px;
+    margin : 15px;
+    border-radius : 5px;
+}
+
+p.cp-title {
+    font-size : 15px;
+    position : absolute;
+    top : 40px;
+    left : 126px;
+    border-bottom : solid 1px;
+}
+
+p.cp-title span {
+    font-size : 13px;
+    display : block;
+}
+
+.cp-fields {
+    position : relative;
+    padding : 5px;
+}
+
+.cp-fields .fa {
+    font-size : 18px;
+    position : absolute;
+    top : 14px;
+    left : 16px;
+}
+
+.cp-fields input ,
+.cp-fields textarea {
+    position : relative;
+    left : 42px;
+    width : 235px;
+    padding : 7px;
+    border : none;
+    border-radius : 5px;
+}
+
+.cp-fields textarea {
+    max-width : 235px;
+    min-height : 115px;
+}
+
+.cp-form-2 input[type='submit'] {
+    display : block;
+    margin : 10px auto 25px;
+    padding : 5px 30px;
+    border : none;
+    border-radius : 5px;
+}
+
+.cp-fields input:focus ,
+.cp-fields textarea:focus {
+    outline : none;
+}
+
+.cp-form-2-success {
+    margin: 20px;
+    border: dashed 1px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: all .6s ease;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #fff;
+    width: 260px;
+    text-align: center;
+}
+
+.cp-form-2-success.cp-form-2-success-show {
+    left: 0;
+}
+
+#cp-form-2.cp-form-2-hide .cp-fields,
+#cp-form-2.cp-form-2-hide input[type='submit'] {
+    visibility: hidden;
+}
+
+/*------------- Positioning ---------------*/
+
+.cp-form-2.bottom-left {
+    bottom : 0;
+    left : 20px;
+    transition : bottom .6s cubic-bezier(.4, 0, 1, 1);
+}
+
+.cp-form-2.bottom-left.down {
+    bottom : -330px;
+}
+
+.cp-form-2.bottom-right {
+    right : 20px;
+    bottom : 0;
+    transition : bottom .6s cubic-bezier(.4, 0, 1, 1);
+}
+
+.cp-form-2.bottom-right.down {
+    bottom : -330px;
+}
+
+.cp-form-2.bottom-center {
+    bottom : 0;
+    left : 50%;
+    transition : bottom .6s cubic-bezier(.4, 0, 1, 1);
+    transform : translateX(-50%);
+}
+
+.cp-form-2.bottom-center.down {
+    bottom : -330px;
+}
+
+/*------------- Colors ---------------*/
+
+.cp-form-2.dark {
+    background : #333333;
+}
+
+.cp-form-2.dark p.cp-title ,
+.cp-form-2.dark .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.dark input[type='submit'] {
+    color : #ffffff;
+    background : #585858;
+}
+
+.cp-form-2.light {
+    background : #ffffff;
+}
+
+.cp-form-2.light p.cp-title ,
+.cp-form-2.light .cp-fields .fa {
+    color : #333333;
+}
+
+.cp-form-2.light input[type='submit'] ,
+.cp-form-2.light .cp-fields input ,
+.cp-form-2.light .cp-fields textarea {
+    color : #333333;
+    background : #dddddd;
+}
+
+.cp-form-2.indigo {
+    background : #3f51b5;
+}
+
+.cp-form-2.indigo form {
+    padding : 10px 0;
+    background : #373c56;
+}
+
+.cp-form-2.indigo p.cp-title ,
+.cp-form-2.indigo .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.indigo input ,
+.cp-form-2.indigo textarea {
+    color : #b0b4cc;
+    background : #4a4f69;
+}
+
+.cp-form-2.indigo input[type='submit'] {
+    margin : 10px auto 10px;
+}
+
+.cp-form-2.teal {
+    background : #3bafb5;
+}
+
+.cp-form-2.teal form {
+    padding : 10px 0;
+    background : #3c8084;
+}
+
+.cp-form-2.teal p.cp-title ,
+.cp-form-2.teal .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.teal input ,
+.cp-form-2.teal textarea {
+    color : #ffffff;
+    background : #396c6f;
+}
+
+.cp-form-2.teal ::-webkit-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.teal :-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.teal ::-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.teal :-ms-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.teal input[type='submit'] {
+    margin : 10px auto 10px;
+}
+
+
+.cp-form-2.orange {
+    background: #FF861F;
+}
+
+.cp-form-2.orange form {
+    padding : 10px 0;
+    background: #754114;
+}
+
+.cp-form-2.orange p.cp-title ,
+.cp-form-2.orange .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.orange input ,
+.cp-form-2.orange textarea {
+    color : #ffffff;
+    background: #8A603C;
+}
+
+.cp-form-2.orange ::-webkit-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.orange :-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.orange ::-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.orange :-ms-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.orange input[type='submit'] {
+    margin : 10px auto 10px;
+}
+
+.cp-form-2.purple {
+    background: #6A37CE;
+}
+
+.cp-form-2.purple form {
+    padding : 10px 0;
+    background: #33284A;
+}
+
+.cp-form-2.purple p.cp-title ,
+.cp-form-2.purple .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.purple input ,
+.cp-form-2.purple textarea {
+    color : #ffffff;
+    background: #4B3F65;
+}
+
+.cp-form-2.purple ::-webkit-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.purple :-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.purple ::-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.purple :-ms-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.purple input[type='submit'] {
+    margin : 10px auto 10px;
+}
+
+.cp-form-2.pink {
+    background: #F34CA1;
+}
+
+.cp-form-2.pink form {
+    padding : 10px 0;
+    background: #5F3148;
+}
+
+.cp-form-2.pink p.cp-title ,
+.cp-form-2.pink .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.pink input ,
+.cp-form-2.pink textarea {
+    color : #ffffff;
+    background: #7B4B63;
+}
+
+.cp-form-2.pink ::-webkit-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.pink :-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.pink ::-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.pink :-ms-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.pink input[type='submit'] {
+    margin : 10px auto 10px;
+}
+
+.cp-form-2.red {
+    background: #F34C4C;
+}
+
+.cp-form-2.red form {
+    padding : 10px 0;
+    background: #563434;
+}
+
+.cp-form-2.red p.cp-title ,
+.cp-form-2.red .cp-fields .fa {
+    color : #ffffff;
+}
+
+.cp-form-2.red input ,
+.cp-form-2.red textarea {
+    color : #ffffff;
+    background: #905C5C;
+}
+
+.cp-form-2.red ::-webkit-input-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.red :-moz-placeholder {
+    color : #ffffff;
+}
+
+.cp-form-2.red ::-moz-placeholder {
+    color : #ffffff;
+}

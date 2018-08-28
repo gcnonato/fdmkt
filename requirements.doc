@@ -1,0 +1,134 @@
+INTRO:
+Food Market is an open online market for all people who want to sell and
+distribute their food, dishes or whole foods to other Food Market users. Food
+Market is not intended for restaurants, but for artisan cooks or farmers.
+Food Market Project is hosted at www.fmarket.org and is based on “Karenderia Multiple
+Restaurant System” which has the following accesses:
+
+
+
+
+Front End: Main access to all site visitors at www.fmarket.org
+Merchant Login: Access to all Food Artisans who sell and distribute their products at
+www.fmarket.org/merchant .
+Driver Login: Access to all delivery and logistics required, at www.fmarket.org/driver
+Administrator Login: Access to main site admins, where we define app configuration
+and setup at www.fmarket.org/admin
+Food Market project also depend on multiple add-ons or Apps that makes a complete mobile
+experience as well:
+
+
+
+Mobile App Version: PhoneGap project for users who wants to order, pay and track
+food orders. Based on Karenderia Mobile App Version .
+Order Taking App: PhoneGap project for users who sell and process orders (Merchant
+Receiving Orders). Based on Karenderia Order Taking App.
+Driver Mobile App: PhoneGap project for users who make delivery. App enable Drivers
+to receive and manage delivery tasks assigned by Merchants or Admins. Based on
+Karenderia Driver Mobile App
+TECHNICAL SPECS:
+
+
+
+
+
+Hosted at: Amazon Web Services.
+Godaddy SSL Certificated.
+OS: ubuntu 16.04 (on AWS)
+Web Server Type and version: Apache 2
+Application server type and version: Karenderia Multiple Restaurant System based on
+Yii framework
+ Database administrator and version: MySQL5
+FREELANCE REQUIRED TASKS:
+1. Enable a sandbox copy of the site and database at sandbox.fmarket.org . This way, all
+new mods are first applied on sandbox site for QA, and then taken to production site at
+www.fmarket.org.
+2. Custom mods:
+IN WEBSITE: Web project at https://www.fmarket.org
+a. Program a Job that notifies to all admin emails when restaurant rating is 2 or
+less.
+i. o EMAIL SUBJECT: “Restaurante mal calificado”
+ii. o EMAIL BODY: “Hay un restaurante que ha caído en malas
+calificaciones. Contactar e identificar lo ocurrido”.
+b. Enable special characters on all email subject. Example: é, ñ,
+ó.
+c. At merchant settings
+(http://www.fmarket.org/merchant/Settings)
+i.
+Do not let user
+to change timezone, set by
+default America/Costa_Rica and hide this option.
+ii.
+Do not let merchant to be able to set the Sales Tax, set 13% by
+default and hide that option.
+iii.
+Do not let merchant to enable TIP options. Disable all by default
+and hide All.
+d. Hide http://www.fmarket.org/merchant/tablebooking and http://www.fmarket.org
+/merchant/bookingreport options from merchant left menu.
+e. Hide http://www.fmarket.org/merchant/shippingrate. Only admin should be able
+to change it at: http://www.fmarket.org/admin/settings .
+f. Sales taxes should be endorsed to MERCHANT as their income, not to FOOD
+MARKET.
+g. Once user is buying, Make "Deliver ASAP" active by default.
+h. Once merchant user is signing up:
+https://www.fmarket.org/store/merchantsignupinfo
+i. Ask for “Carnet de manipulación de alimentos:”, and show 3 options:
+“Al día”, “En proceso”, “No cuento con permiso”. If “Al día” is chose,
+enable user to upload an image.
+ii. Save and show this data on the search results as:
+IF: “Al día” was chosen:
+Show: “Cuenta con permiso de manipulación de alimentos” (Add a link
+on this text to see image).
+IF: “En proceso” or “No cuento con permiso” was chosen:
+Show: “Permiso de manipulación de alimentos pendiente”
+Show this at:
+- Each merchant on WEB search:
+https://www.fmarket.org/store/browse
+- Merchant’s information pane:
+https://www.fmarket.org/store/menu/merchant/la-favorita
+- And ON MOBILE VERSION APP search results
+iii. Enable merchant user to update this later at:
+http://www.fmarket.org/merchant/Settings under a new <h2> tittle called
+“Permiso de manipulación de alimentos”.
+IN MOBILE VERSION APP: Project based on PhoneGap
+i. Translate 5 English alert messages to Spanish. They are hard
+coded in projects. I.e.:
+j.
+Show 3 welcome screens, as carousel images, only the first time user opens
+App. Images will show user how to use APP and will be provided to the
+freelancer later.
+k. On every new installation, make sure Menu > Configuration > Enabled Push
+notifications IS always active by default.
+l. Once user is searching:
+i. Change this icon for a MAP PIN: Like this one:
+http://www.clker.com/cliparts/g/9/4/c/Y/0/orange-map-pin.svg
+ii.
+Move “Use my location” link on top and hide “Enter your location”
+title:
+m. Once user is buying
+i. Once food item
+has been added to the cart, ask if USER wants to
+keep buying (Spanish: ¿Deseas seguir comprando?). If yes
+(Spanish: Sí), then stay on the same screen. If No (Spanish: No),
+then proceed to Cart screen.
+ii.
+iii.
+Make "Deliver ASAP" active by default.
+If user is not logged in, and hits “Checkout” button, instead of
+showing up “Signup” screen, show “Log In” screen. Login screen
+must show the “Signup” link.
+iv.
+Once user needs to login to proceed, show FACEBOOK login as first
+(we want to save user's time and make them login with Facebook).
+v.
+Once user is buying and “Shipping address” is required, get and
+use device location by default.
+n. Once user finishes ordering process, redirect automatically to “TRACK
+ORDER”, here: ORDERS > Last order > and show the three options: “Show
+Order Details”, “Click here to Re-order”, “Track your Order”.
+o. Once order status is “successful”, send push to user’s device with message
+and link to “Add reviews” screen. Message must say “¿Qué te pareció
+{restaurant_name}? Calificalo aquí”. Link must be active once user taps on
+Push Notification.
+** END OF THE DOCUMENT **

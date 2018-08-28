@@ -1,0 +1,191 @@
+.cp-notifications {
+	position : fixed !important;
+	z-index : 9999;
+	right : 0;
+	bottom : 0;
+}
+
+.cp-notify {
+	font-weight : normal;
+	position : relative;
+	right : -100%;
+	display : block;
+	width : 335px;
+	margin : 10px;
+	padding : 10px;
+	opacity : 0;
+	color : #ffffff;
+}
+
+.cp-notify > a:hover ,
+.cp-notify > a:focus {
+	text-decoration : none;
+}
+
+.cp-icon {
+	font-size : 50px;
+	font-style : normal;
+	display : inline-block;
+	margin-right : 5px;
+	padding : 0 10px;
+}
+
+.cp-text {
+	font-size : 14px;
+	display : inline-block;
+	padding : 7px 20px 7px 0;
+}
+
+.cp-text span {
+	display: block;
+	margin : 0;
+}
+
+.cp-text span:first-child {
+	margin-bottom: 5px;
+	font-size : 18px;
+	font-weight : bold;
+}
+
+.cp-dismiss {
+	font-size : 18px;
+	position : absolute;
+	top : 6px;
+	right : 8px;
+	cursor : pointer;
+}
+
+#cp-success {
+	display : none;
+}
+
+.cp-success {
+	background : #32b9b9;
+}
+
+.cp-success > .cp-dismiss {
+	color : #b4ffff;
+}
+
+#cp-success:checked + .cp-success {
+	display : none;
+}
+
+#cp-info {
+	display : none;
+}
+
+.cp-info {
+	background : #524365;
+}
+
+.cp-info > .cp-dismiss {
+	color : #bb9ee0;
+}
+
+#cp-info:checked + .cp-info {
+	display : none;
+}
+
+#cp-warning {
+	display : none;
+}
+
+.cp-warning {
+	background : #e46e4b;
+}
+
+.cp-warning > .cp-dismiss {
+	color : #ffddd3;
+}
+
+#cp-warning:checked + .cp-warning {
+	display : none;
+}
+
+#cp-error {
+	display : none;
+}
+
+.cp-error {
+	background : #d04451;
+}
+
+.cp-error > .cp-dismiss {
+	color : #fdc0c6;
+}
+
+#cp-error:checked + .cp-error {
+	display : none;
+}
+
+.cp-delay-2s {
+	animation : cpNotifyIn 2s 1 2s forwards;
+}
+
+.cp-delay-4s {
+	animation : cpNotifyIn 2s 1 4s forwards;
+}
+
+.cp-delay-6s {
+	animation : cpNotifyIn 2s 1 6s forwards;
+}
+
+.cp-delay-8s {
+	animation : cpNotifyIn 2s 1 8s forwards;
+}
+
+@keyframes cpNotifyIn {
+	0% {
+		right : -100%;
+	}
+	100% {
+		right : 0;
+		opacity : 1;
+	}
+}
+
+.cp-out-16s {
+	position : relative;
+	animation : cpNotifyOut 1s 1 16s forwards;
+}
+
+.cp-out-14s {
+	position : relative;
+	animation : cpNotifyOut 1s 1 14s forwards;
+}
+
+.cp-out-12s {
+	position : relative;
+	animation : cpNotifyOut 1s 1 12s forwards;
+}
+
+.cp-out-10s {
+	position : relative;
+	animation : cpNotifyOut 1s 1 10s forwards;
+}
+
+@keyframes cpNotifyOut {
+	0% {
+		right : 0;
+		opacity : 1;
+	}
+	100% {
+		right : -100%;
+	}
+}
+
+@media screen and (max-width:336px) {
+	.cp-notify {
+	    width: auto;
+	    text-align: center;
+	}
+
+	.cp-icon {
+	    display: block;
+	}
+
+	.cp-text {
+	    padding: 7px 20px;
+	}
+}

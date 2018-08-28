@@ -1,0 +1,149 @@
+changes:-
+
+Program a Job that notifies to all admin emails when restaurant rating is 2 or
+less.
+i. o EMAIL SUBJECT: “Restaurante mal calificado”
+ii. o EMAIL BODY: “Hay un restaurante que ha caído en malas
+calificaciones. Contactar e identificar lo ocurrido”.
+
+==> AjaxAdmin.php changes
+    --> changes here addReviews()
+    protected/components/AjaxAdmin.php
+    protected/components/Ajax.php
+    protected/components/Funstions.php
+    protected/components/FunstionsK.php
+    protected/components/CronController.php
+    protected/components/MerchantController.php
+    protected/components/FunstionsK.php
+    protected/components/ApiController.php
+    yiiframework/logging/CEmailLogRoute.php
+    protected/views/merchant/settings.php
+    protected/views/store/merchant-signup-info.php updated
+				
+                //Below line added by harish 
+				$subject_title='=?UTF-8?B?'.base64_encode($subject).'?=';	
+				$subject=$subject_title;
+
+
+g. Once user is buying, Make "Deliver ASAP" active by default.
+==> protected/views/store/menu.php
+
+f. Sales taxes should be endorsed to MERCHANT as their income, not to FOOD
+MARKET.
+==> protected/components/AjaxAdmin.php 2551 line commented
+
+
+ALTER TABLE ka_merchant ADD COLUMN food_handling_card VARCHAR(255);
+
+ALTER TABLE ka_merchant ADD COLUMN food_handling_card_photo VARCHAR(255);
+
+
+h. Once merchant user is signing up:
+==> protected/views/front/merchant-information.php added
+    protected/views/store/menu.php updated
+    protected/components/Ajax.php updated
+    protected/components/FunctionsV3.php
+
+e) Show it again please, we need merchant to select cost per distance  Just forget this requirement.
+==> protected/components/Funstions.php
+
+    iii. Enable merchant user to update this later at:
+    http://www.fmarket.org/merchant/Settings under a new <h2> tittle called
+    ==>
+    merchant_food_message added in ka_option table
+    protected/components/AjaxAdmin.php
+    protected/views/merchant/settings.php
+
+
+Email:-
+protected/components/Ajax.php updated
+protected/components/AjaxAdmin.php Not updated (pending)
+protected/components/ExternalServices.php updated
+protected/components/Funstions.php (this file is uploaded to server for testing)
+
+============== Upload to live and sandbox ========================
+
+Tuesday, 28 February 2017
+[09:44:50] jexplorer_web: Media received. To view it, go to: https://login.skype.com/login/sso?go=xmmfallback?pic=0-neu-d5-1fbbabc0fd0894fa5b583dba48fb9b46
+[09:44:57] jexplorer_web: "Ok, I just applied all changes to Live site. After that, I made an exact copy of all files in live site, into sandbox version."
+[09:45:02] jexplorer_web: "We can now work over sandbox version only :)"
+[09:45:10] jexplorer_web: "1.  Please hide this options. They must have default values from the moment new merchant is created, and not shown as options for merchant to change."
+[09:45:25] jexplorer_web: "2. Regarding this options, please check on red comments:"
+[09:45:25] jexplorer_web: Media received. To view it, go to: https://login.skype.com/login/sso?go=xmmfallback?pic=0-neu-d2-478e0111bccf463b9c8688731fece2d4
+[09:45:50] jexplorer_web: "First, I compared all files on sandbox you toldme were changed with live version. Second, I copied line by line, all mods from sandbox to the live version, so we can assure no code from Live site gets lost."
+
+"Then I made a fresh copy from sandbox to live version. Al files on sandbox were overwritten to have only one version"
+
+"Sorry, please do not read last message: I meant: Then I made a fresh copy from live site to sandbox version. All files on sandbox were overwritten to have only one version"
+[09:46:09] jexplorer_web: "Hello, we don´t see any changes at file:  protected/views/admin/settings.php"
+[09:46:11] jexplorer_web: Media received. To view it, go to: https://login.skype.com/login/sso?go=xmmfallback?pic=0-neu-d5-0bd85bca58adc036ba9f5bf93ec711e5
+
+==> Changed files
+protected/views/merchant/settings.php
+protected/views/store/merchant-signup-info.php
+
+
+2-march-2017
+protected/views/store/merchant-signup-info.php
+protected/views/merchant/settings.php
+
+
+14-march-2017
+protected/components/FunctionsV3.php
+protected/view/front/merchant-information.php
+protected/views/store/merchant-signup-info.php
+protected/components/Ajax.php
+protected/components/AjaxAdmin.php
+assets/js/admin.js
+protected/views/merchant/settings.php
+
+=====================================================
+6-apr-2017 (Uploaded to test server only)
+protected/views/merchant/settings.php
+
+
+
+ioskey 	AIzaSyCXZmyN1CaSKZ3QCO2zPdwYN02zRS1C-28
+
+=====================================================
+18-apr-2017
+
+There is a part on merchant settings that you guys added, which is not part of requirement.
+This:
+Captura de pantalla 2017-04-18 a la(s) 00.28.53.png
+People don't need to type anything
+Please delete that blank space from /store/merchantsignupinfo as well.
+so should we remove that textarea?
+When food_handling_card = "En proceso", then  merchant_food_message = "En proceso"
+And
+When food_handling_card = "No cuento con permiso", then  merchant_food_message = "No cuento con permiso"
+There is no need for people to Type, it is only required to select an image when: food_handling_card = "Al día",
+
+protected/views/merchant/settings.php (upload to test only, live remains)
+protected/views/store/merchant-signup-info.php (upload to test only, live remains)
+
+
+================================================================
+
+2-may-2017
+
+I checked, and we are almost there. Just make sure to display information on any of the 3 statuses.For example: Show data wether "En proceso" or "No cuento con permiso" is selectedIn this example, merchant selected "En proceso", so system must show it:
+
+protected/components/FunctionsV3.php (upload to test only, live remains)
+protected/view/front/merchant-information.php (upload to test only, live remains)
+protected/components/AjaxAdmin.php (upload to test only, live remains) line number 1462
+
+
+=================================================================
+8-may-2017
+
+Hello, let me handle you QA observations: Instead of select, it should say: "Selecciona una opción"
+Instead of "Cuenta con permiso de manipulación de alimentos:", it must say "Permiso de manipulación de alimentos:"
+
+protected/views/merchant/settings.php (upload to test only, live remains)
+protected/views/store/merchant-signup-info.php (upload to test only, live remains)
+
+=== 12-may-2017 ===
+Above all files are uploaded on live also
+==================================================================
+

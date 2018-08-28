@@ -1,0 +1,462 @@
+/*------------- Form ---------------*/
+
+.cp-form {
+    position: fixed;
+    z-index: 9999;
+    width: 300px;
+}
+
+/*-- User Icon --*/
+
+.cp-form .cp-user-icon {
+    position: absolute;
+    top: -49px;
+    right: 12px;
+    display: block;
+    width: 58px;
+    margin: 20px auto 15px;
+    border: solid 2px;
+    border-radius: 100%;
+}
+
+/*-- Title --*/
+
+.cp-form .cp-title {
+    font-size: 16px !important;
+    padding: 8px 18px !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+/*-- Text --*/
+
+.cp-form p {
+    font-size: 13px;
+    margin: 0;
+    padding: 15px;
+}
+
+.cp-form p.cp-message {
+    margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+
+.cp-form form {
+    padding: 0 15px 15px 15px;
+}
+
+.cp-form input,
+.cp-form textarea {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    width: 254px;
+    max-width: 254px;
+    margin-bottom: 10px;
+    margin-left: 7px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+.cp-form input:focus,
+.cp-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.cp-form input[type='submit'] {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .4s ease;
+    color: #fff !important;
+}
+
+.cp-form input[type='submit']:hover {
+    opacity: .8;
+}
+
+.cp-form textarea {
+    min-height: 110px;
+}
+
+.cp-form-success {
+    margin: 20px;
+    border: dashed 1px #6D7392;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: all .6s ease;
+    transform: translateY(-50%);
+}
+
+.cp-form-success.cp-form-success-show {
+    left: 0;
+}
+
+#cp-form.cp-form-hide {
+    opacity: 0;
+}
+
+/*-- Colors --*/
+
+/* Pink */
+
+.cp-form.pink {
+    background: #4a383e;
+}
+
+.cp-form.pink .cp-user-icon {
+    border-color: #e91e63;
+}
+
+.cp-form.pink .cp-title {
+    background: #e91e63;
+}
+
+.cp-form.pink p {
+    color: #ccb0b0;
+}
+
+.cp-form.pink input,
+.cp-form.pink textarea {
+    color: #ccb0b0;
+    background: #5d494f;
+}
+
+.cp-form.pink ::-webkit-input-placeholder {
+    color: #ccb0b0;
+}
+
+.cp-form.pink ::-moz-placeholder{
+    color: #ccb0b0;
+}
+
+.cp-form.pink :-ms-input-placeholder {
+    color: #ccb0b0;
+}
+
+.cp-form.pink :-moz-placeholder {
+    color: #ccb0b0;
+}
+
+.cp-form.pink input[type='submit'] {
+    background: #e91e63;
+}
+
+/* Purple */
+
+.cp-form.purple {
+    background: #32253a;
+}
+
+.cp-form.purple .cp-user-icon {
+    border-color: #6a1b9a;
+}
+
+.cp-form.purple .cp-title {
+    background: #6a1b9a;
+}
+
+.cp-form.purple p {
+    color: #96899e;
+}
+
+.cp-form.purple input,
+.cp-form.purple textarea {
+    color: #96899e;
+    background: #46394e;
+}
+
+.cp-form.purple ::-webkit-input-placeholder {
+    color: #96899e;
+}
+
+.cp-form.purple ::-moz-placeholder {
+    color: #96899e;
+}
+
+.cp-form.purple :-ms-input-placeholder {
+    color: #96899e;
+}
+
+.cp-form.purple :-moz-placeholder {
+    color: #96899e;
+}
+
+.cp-form.purple input[type='submit'] {
+    background: #6a1b9a;
+}
+
+/* Red */
+
+.cp-form.red {
+    background: #3a2626;
+}
+
+.cp-form.red .cp-user-icon {
+    border-color: #c62828;
+}
+
+.cp-form.red .cp-title {
+    background: #c62828;
+}
+
+.cp-form.red p {
+    color: #a78c8c;
+}
+
+.cp-form.red input,
+.cp-form.red textarea {
+    color: #a78c8c;
+    background: #4c3a3a;
+}
+
+.cp-form.red ::-webkit-input-placeholder {
+    color: #a78c8c;
+}
+
+.cp-form.red ::-moz-placeholder {
+    color: #a78c8c;
+}
+
+.cp-form.red :-ms-input-placeholder {
+    color: #a78c8c;
+}
+
+.cp-form.red :-moz-placeholder {
+    color: #a78c8c;
+}
+
+.cp-form.red input[type='submit'] {
+    background: #c62828;
+}
+
+/* Indigo */
+
+.cp-form.indigo {
+    background: #373c56;
+}
+
+.cp-form.indigo .cp-user-icon {
+    border-color: #3f51b5;
+}
+
+.cp-form.indigo .cp-title {
+    background: #3f51b5;
+}
+
+.cp-form.indigo p {
+    color: #b0b4cc;
+}
+
+.cp-form.indigo input,
+.cp-form.indigo textarea {
+    color: #b0b4cc;
+    background: #4a4f69;
+}
+
+.cp-form.indigo ::-webkit-input-placeholder {
+    color: #b0b4cc;
+}
+
+.cp-form.indigo ::-moz-placeholder {
+    color: #b0b4cc;
+}
+
+.cp-form.indigo :-ms-input-placeholder {
+    color: #b0b4cc;
+}
+
+.cp-form.indigo :-moz-placeholder {
+    color: #b0b4cc;
+}
+
+.cp-form.indigo input[type='submit'] {
+    background: #3f51b5;
+}
+
+/* Blue */
+
+.cp-form.blue {
+    background: #2a3844;
+}
+
+.cp-form.blue .cp-user-icon {
+    border-color: #2196f3;
+}
+
+.cp-form.blue .cp-title {
+    background: #2196f3;
+}
+
+.cp-form.blue p {
+    color: #87949e;
+}
+
+.cp-form.blue input,
+.cp-form.blue textarea {
+    color: #87949e;
+    background: #3d4954;
+}
+
+.cp-form.blue ::-webkit-input-placeholder {
+    color: #87949e;
+}
+
+.cp-form.blue ::-moz-placeholder {
+    color: #87949e;
+}
+
+.cp-form.blue :-ms-input-placeholder {
+    color: #87949e;
+}
+
+.cp-form.blue :-moz-placeholder {
+    color: #87949e;
+}
+
+.cp-form.blue input[type='submit'] {
+    background: #2196f3;
+}
+
+/* Teal */
+
+.cp-form.teal {
+    background: #1c2322;
+}
+
+.cp-form.teal .cp-user-icon {
+    border-color: #009688;
+}
+
+.cp-form.teal .cp-title {
+    background: #009688;
+}
+
+.cp-form.teal p {
+    color: #7a8886;
+}
+
+.cp-form.teal input,
+.cp-form.teal textarea {
+    color: #7a8886;
+    background: #293130;
+}
+
+.cp-form.teal ::-webkit-input-placeholder {
+    color: #7a8886;
+}
+
+.cp-form.teal ::-moz-placeholder {
+    color: #7a8886;
+}
+
+.cp-form.teal :-ms-input-placeholder {
+    color: #7a8886;
+}
+
+.cp-form.teal :-moz-placeholder {
+    color: #7a8886;
+}
+
+.cp-form.teal input[type='submit'] {
+    background: #009688;
+}
+
+/*-- Form Position --*/
+
+/* Bottom Left */
+
+.cp-form.bottom-left {
+    bottom: 0;
+    left: 20px;
+}
+
+.cp-form.bottom-left.down {
+    bottom: -353px;
+}
+
+/* Bottom Right */
+
+.cp-form.bottom-right {
+    bottom: 0;
+    right: 20px;    
+}
+
+.cp-form.bottom-right.down {
+    bottom: -353px;
+}
+
+/* Bottom Center */
+
+.cp-form.bottom-center {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cp-form.bottom-center.down {
+    bottom: -353px;
+}
+
+/*-- Animation Duration --*/
+
+.cp-form.animation-duration-200 {
+    transition: all .2s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+.cp-form.animation-duration-500 {
+    transition: all .5s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+.cp-form.animation-duration-800 {
+    transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+.cp-form.animation-duration-1000 {
+    transition: all 1s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+.cp-form.animation-duration-1500 {
+    transition: all 1.5s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+.cp-form.animation-duration-2000 {
+    transition: all 2s cubic-bezier(.22, .67, .43, 1.22) .2s;
+}
+
+@media screen and (max-width: 676px) {
+    .cp-form:hover .cp-user-icon {
+        display: none;
+    }
+
+    .cp-form .cp-message {
+        display: none;
+    }
+
+    .cp-form form {
+        padding-top: 15px;
+    }
+
+    .cp-form.top-right,
+    .cp-form.top-center,
+    .cp-form.top-left {
+        top: -297px;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cp-form.bottom-right,
+    .cp-form.bottom-center,
+    .cp-form.bottom-left {
+        right: 50%;
+        bottom: -300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

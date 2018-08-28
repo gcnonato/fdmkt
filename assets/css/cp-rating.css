@@ -1,0 +1,141 @@
+/* Rating */
+
+.cp-rating {
+    position : fixed;
+    z-index : 9999;
+    top : 0;
+    left : 10px;
+    padding : 5px;
+    transition : all .8s cubic-bezier(.4, 0, .2, 1);
+}
+
+.cp-rating:after {
+    position : absolute;
+    z-index : -1;
+    top : -145px;
+    left : -200px;
+    width : 400px;
+    height : 300px;
+    content : '';
+    transform : rotate(140deg);
+    background : #3f51b5;
+}
+
+#cp-rating-close {
+    display : none;
+}
+
+#cp-rating-close:checked ~ .cp-rating {
+    left : -100%;
+}
+
+.cp-rating-close {
+    font-size : 22px;
+    line-height : 42px;
+    position : fixed;
+    z-index : 10000;
+    top : 10px;
+    left : 10px;
+    width : 44px;
+    height : 44px;
+    cursor : pointer;
+    transition : all .8s cubic-bezier(.4, 0, .2, 1);
+    text-align : center;
+    color : #b2beff;
+    border : solid 1px #5c70de;
+    border-radius : 100%;
+    background : #3f51b5;
+}
+
+.cp-rating-close:before {
+    font-family : FontAwesome;
+    content : '\f057';
+}
+
+#cp-rating-close:checked + .cp-rating-close {
+    left : -100%;
+}
+
+.cp-rating-close:hover {
+    box-shadow : 0 0 40px rgba(0,0,0,.2) inset;
+}
+
+
+.cp-rating-content {
+    position : relative;
+    top : 50px;
+    left : -20px;
+    transform : rotate(320deg);
+}
+
+.cp-rating-title {
+    margin-top : 0;
+    margin-bottom : 0;
+    text-align : center;
+    color : #ffffff;
+}
+
+#cp-rating.cp-rating-hide {
+    display: none;
+}
+
+.cp-rating-result {
+    position: relative;
+    top: 12px;
+    color: #ffd700;
+    display: none;
+}
+
+.cp-rating-result.cp-rating-result-show {
+    display: block;
+}
+
+.rating {
+    padding : 7px 0 0 0;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+    float : left;
+    border : none;
+}
+
+.rating > input {
+    display : none;
+}
+
+.rating > label:before {
+    font-family : FontAwesome;
+    font-size : 1.25em;
+    display : inline-block;
+    margin : 5px;
+    content : '\f005';
+}
+
+.rating > .half:before {
+    position : absolute;
+    content : '\f089';
+}
+
+.rating > label {
+    float : right;
+    color : #ffffff;
+}
+
+.rating > input:checked ~ label ,
+/* show gold star when clicked */
+.rating:not(:checked) > label:hover ,
+/* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+    color : #ffd700;
+} /* hover previous stars in list */
+
+.rating > input:checked + label:hover ,
+/* hover current star when changing rating */
+.rating > input:checked ~ label:hover ,
+.rating > label:hover ~ input:checked ~ label ,
+/* lighten current selection */
+.rating > input:checked ~ label:hover ~ label {
+    color : #ffed85;
+}

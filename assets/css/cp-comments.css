@@ -1,0 +1,151 @@
+.cp-comments {
+	position : fixed !important;
+	z-index : 9999;
+	right : 0;
+	bottom : 50px;
+	opacity: 0;
+}
+
+.cp-comments.in {
+	animation : cpCommentIn 1s 1 forwards;
+}
+
+@keyframes cpCommentIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity : 1;
+	}
+}
+
+
+.cp-comments.right {
+	right: 0;
+}
+
+.cp-comments.left {
+	left: 0;
+}
+
+#cp-comment {
+	display : none;
+}
+
+#cp-comment:checked + .cp-comment {
+	display : none;
+}
+
+.cp-comment {
+	font-weight : normal;
+	position : relative;
+	margin : 10px;
+	color : #ffffff;
+	border-radius : 5px;
+	background : #453f5d;
+}
+
+.cp-comment:before {
+	position : absolute;
+	top : 100%;
+	right : 15px;
+	width : 0;
+	height : 0;
+	content : '';
+	border-top : 24px solid #453f5d;
+	border-right : 20px solid transparent;
+	border-left : 7px solid transparent;
+}
+
+.cp-void {
+	display : block;
+	padding : 10px;
+	color : inherit;
+}
+
+.cp-void:hover ,
+.cp-void:focus {
+	text-decoration : none;
+	color : inherit;
+}
+
+.cp-icon {
+	display : inline-block;
+	width : 85px;
+	max-width : 100%;
+	margin-right : 7px;
+	padding : 0 5px;
+	vertical-align : top;
+	border-radius : 100%;
+}
+
+.cp-text {
+	font-size : 12px;
+	display : inline-block;
+	max-width : 260px;
+	padding : 7px 20px 7px 0;
+}
+
+.cp-text span {
+	display: block;
+	margin : 0;
+}
+
+.cp-text span:last-child {
+	margin-top: 5px;
+	font-size : 14px;
+	font-weight : bold;
+	font-style : italic;
+}
+
+.cp-dismiss {
+	font-size : 18px;
+	position : absolute;
+	top : 6px;
+	right : 8px;
+	cursor : pointer;
+	color : #b1a5e2;
+}
+
+.cp-out-16s {
+	position : relative;
+	animation : cpCommentOut 1s 1 16s forwards;
+}
+
+.cp-out-14s {
+	position : relative;
+	animation : cpCommentOut 1s 1 14s forwards;
+}
+
+.cp-out-12s {
+	position : relative;
+	animation : cpCommentOut 1s 1 12s forwards;
+}
+
+.cp-out-10s {
+	position : relative;
+	animation : cpCommentOut 1s 1 10s forwards;
+}
+
+@keyframes cpCommentOut {
+	0% {
+		right : 0;
+		opacity : 1;
+	}
+	100% {
+		right : -100%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.cp-icon {
+	    display: block;
+	    margin: 10px auto;
+	}
+
+	.cp-text {
+	    max-width: none;
+	    text-align: center;
+	    padding: 7px 20px;
+	}
+}

@@ -1,0 +1,136 @@
+/* Advertising */
+
+.cp-advertising {
+	position : fixed;
+	z-index : 9999;
+	bottom : 40px;
+	width : 280px;
+	transition : all .8s cubic-bezier(.4, 0, .2, 1);
+}
+
+.cp-advertising.right {
+	right : 40px;
+	animation : cpadvertisingright 1s 1;
+}
+
+
+@keyframes cpadvertisingright {
+	0% {
+		right : -100%;
+	}
+	100% {
+		right : 40px;
+	}
+}
+
+
+.cp-advertising.left {
+	left : 40px;
+	animation : cpadvertisingleft 1s 1;
+}
+
+@keyframes cpadvertisingleft {
+	0% {
+		left : -100%;
+	}
+	100% {
+		left : 40px;
+	}
+}
+
+.cp-advertising:hover ,
+.cp-advertising:focus {
+	text-decoration : none;
+}
+
+.cp-advertising > img {
+	max-width : 100%;
+	transition : all .4s ease;
+	outline : solid 2px transparent;
+	outline-offset : -20px;
+}
+
+.cp-advertising > img:hover {
+	outline : solid 2px #ffffff;
+	outline-offset : 0;
+}
+
+.cp-advertising > p {
+	font-size : 12px;
+	color : #a5a2a2;
+	background : #ececec;
+}
+
+.cp-advertising.right > p {
+	padding : 5px 30px 5px 5px;
+	text-align : right;
+}
+
+.cp-advertising.left > p {
+	padding : 5px 5px 5px 30px;
+	text-align : left;
+}
+
+#cp-advertising-close {
+	display : none;
+}
+
+#cp-advertising-close:checked ~ .cp-advertising ,
+#cp-advertising-close:checked + .cp-advertising-close,
+.cp-advertising.out,
+.cp-advertising-close.out {
+	bottom : -100%;
+}
+
+.cp-advertising-close {
+	position : fixed;
+	z-index : 10000;
+	bottom : 45px;
+	padding : 4px 7px;
+	cursor : pointer;
+	transition : all .8s cubic-bezier(.4, 0, .2, 1);
+	color : #ffffff;
+	background : #c73c5b;
+}
+
+.cp-advertising-close.right {
+	right : 40px;
+	animation : cpadvertisingright 1s 1;
+	border-radius : 0 0 10px 0;
+}
+
+.cp-advertising-close.left {
+	left : 40px;
+	animation : cpadvertisingleft 1s 1;
+	border-radius : 0 0 0 10px;
+}
+
+@media screen and (max-width: 375px) {
+	.cp-advertising.left ,
+	.cp-advertising-close.left {
+		left : 10px;
+	}
+
+	@keyframes cpadvertisingleft {
+		0% {
+			left : -100%;
+		}
+		100% {
+			left : 10px;
+		}
+	}
+
+	.cp-advertising.right ,
+	.cp-advertising-close.right {
+		right : 10px;
+	}
+
+	@keyframes cpadvertisingright {
+		0% {
+			right : -100%;
+		}
+		100% {
+			right : 10px;
+		}
+	}
+}
